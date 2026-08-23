@@ -1,0 +1,58 @@
+{
+  "name": "byte-boost",
+  "version": "0.3.3",
+  "private": true,
+  "description": "BYTE BOOST Windows network diagnostics and optimizer",
+  "author": "BYTE BOOST",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check i18n.js && node --check app.js && node --check electron/main.js && node --check electron/preload.js && node --check electron/network-service.js",
+    "test": "node --test tests/*.test.js",
+    "smoke": "node electron/smoke.js",
+    "smoke:packaged": "node electron/smoke.js --packaged",
+    "capture": "node electron/capture.js",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "43.4.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "com.byteboost.networkoptimizer",
+    "productName": "BYTE BOOST",
+    "directories": {
+      "output": "release-0.3.3"
+    },
+    "electronDist": "node_modules/electron/dist",
+    "asar": true,
+    "files": [
+      "index.html",
+      "style.css",
+      "app.js",
+      "i18n.js",
+      "font/**/*",
+      "img/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "native",
+        "to": "native"
+      }
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": false
+    }
+  }
+}

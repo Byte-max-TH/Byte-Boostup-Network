@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b0f">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+    <title>BYTE BOOST — Network Optimizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="main-app" aria-busy="true">
+    <div class="head-app">
+        <div class="logo">
+            <img src="./img/icon/logo.svg" alt="BYTE BOOST">
+            <div class="brand-copy">
+                <span>Byte boost</span>
+                <small><i></i><span class="scan-state">Scanning...</span></small>
+            </div>
+        </div>
+        <div class="end-head">
+            <button class="toggle-theme" type="button" aria-label="เปลี่ยนเป็นธีมสว่าง" aria-pressed="false"></button>
+            <button class="three-dot" type="button" aria-label="Open settings"></button>
+            <button class="x" type="button" aria-label="ปิดโปรแกรม"></button>
+        </div>
+    </div>
+    <main class="feature-panel">
+        <section class="dashboard-view">
+            <div class="panel-scroll">
+                <div class="overview-meta">
+                    <span><span data-i18n="profile">Profile</span> <strong class="profile-meta">—</strong></span>
+                    <span><span data-i18n="lastScan">Last Scan</span> <strong class="last-scan">Scanning...</strong></span>
+                    <button class="scan-button" type="button" aria-label="สแกนเครือข่ายอีกครั้ง">↻</button>
+                </div>
+
+                <div class="quick-metrics" aria-label="ข้อมูลเครือข่ายล่าสุด">
+                    <div><span>Ping</span><strong data-metric="ping">--</strong><small>ms</small></div>
+                    <div><span>Jitter</span><strong data-metric="jitter">--</strong><small>ms</small></div>
+                    <div><span>Loss</span><strong data-metric="loss">--</strong><small>%</small></div>
+                    <div><span>DNS</span><strong data-metric="dns">--</strong><small>ms</small></div>
+                </div>
+
+                <section class="current-profile">
+                    <span data-i18n="currentProfile">Current Profile</span>
+                    <strong data-i18n="noActiveProfile">No active profile</strong>
+                    <p data-i18n="chooseProfileHint">Choose a mode below to apply it.</p>
+                </section>
+
+                <div class="live-connection">
+                    <span data-i18n="liveConnection">Live Connection</span>
+                    <strong>↓ <span data-live="download">--</span> <small>Mbps</small></strong>
+                    <strong>↑ <span data-live="upload">--</span> <small>Mbps</small></strong>
+                    <b data-live="type">—</b>
+                </div>
+
+                <h1 class="feature-title" data-i18n="feature">Feature</h1>
+                <div class="feature-list">
+                    <button class="feature-item mode-option" type="button" data-profile="1-click" aria-pressed="false">
+                        <span class="feature-name" data-i18n="profile1Click">1 Click Optimize</span>
+                        <span class="mode-status"><span class="status-dot"></span><span class="status-label">Off</span></span>
+                    </button>
+                    <button class="feature-item mode-option" type="button" data-profile="gaming" aria-pressed="false">
+                        <span class="feature-name" data-i18n="profileGaming">Gaming Mode</span>
+                        <span class="mode-status"><span class="status-dot"></span><span class="status-label">Off</span></span>
+                    </button>
+                    <button class="feature-item mode-option" type="button" data-profile="download" aria-pressed="false">
+                        <span class="feature-name" data-i18n="profileDownload">Download Mode</span>
+                        <span class="mode-status"><span class="status-dot"></span><span class="status-label">Off</span></span>
+                    </button>
+                    <button class="feature-item mode-option" type="button" data-profile="streaming" aria-pressed="false">
+                        <span class="feature-name" data-i18n="profileStreaming">Streaming Mode</span>
+                        <span class="mode-status"><span class="status-dot"></span><span class="status-label">Off</span></span>
+                    </button>
+                    <button class="feature-item mode-option" type="button" data-profile="balanced" aria-pressed="false">
+                        <span class="feature-name" data-i18n="profileBalanced">Balanced Mode</span>
+                        <span class="mode-status"><span class="status-dot"></span><span class="status-label">Off</span></span>
+                    </button>
+                </div>
+
+                <h2 class="feature-title tools-title" data-i18n="tools">Tools</h2>
+                <div class="feature-list tools-list">
+                    <button class="feature-item tool-item" type="button" data-tool="dns">
+                        <span class="feature-name" data-i18n="toolDns">DNS Optimizer</span><span class="tool-arrow">›</span>
+                    </button>
+                    <button class="feature-item tool-item" type="button" data-tool="repair">
+                        <span class="feature-name" data-i18n="toolRepair">Network Repair</span><span class="tool-arrow">›</span>
+                    </button>
+                    <button class="feature-item tool-item" type="button" data-tool="mtu">
+                        <span class="feature-name" data-i18n="toolMtu">MTU Optimizer</span><span class="tool-arrow">›</span>
+                    </button>
+                    <button class="feature-item tool-item" type="button" data-tool="adapter">
+                        <span class="feature-name" data-i18n="toolAdapter">Adapter Optimizer</span><span class="tool-arrow">›</span>
+                    </button>
+                    <button class="feature-item tool-item" type="button" data-tool="diagnostics">
+                        <span class="feature-name" data-i18n="toolDiagnostics">Connection Diagnostics</span><span class="tool-arrow">›</span>
+                    </button>
+                    <button class="feature-item tool-item is-danger" type="button" data-tool="restore">
+                        <span class="feature-name" data-i18n="toolRestore">Restore Default</span><span class="tool-arrow">›</span>
+                    </button>
+                </div>
+
+                <button class="health-summary" type="button">
+                    <span><small data-i18n="networkHealth">Network Health</small><strong>Good connection</strong></span>
+                    <b>82%</b>
+                </button>
+
+                <details class="recent-changes">
+                    <summary class="feature-title"><span data-i18n="recentChanges">Recent Changes</span> <span data-i18n="viewDetails">View details</span></summary>
+                    <ul>
+                        <li class="is-empty"><span data-i18n="noRecentChanges">No changes applied yet</span></li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+
+        <section class="results-view" hidden aria-live="polite">
+            <div class="results-header">
+                <button class="back-button" type="button" aria-label="กลับไปหน้าหลัก">‹</button>
+                <h1 data-i18n="networkHealth">Network Health</h1>
+                <strong class="health-score">82%</strong>
+            </div>
+
+            <div class="metrics-grid">
+                <div><span>Ping</span><strong><b data-result="ping">—</b> <small>ms</small></strong></div>
+                <div><span>Jitter</span><strong><b data-result="jitter">—</b> <small>ms</small></strong></div>
+                <div><span>Packet Loss</span><strong><b data-result="loss">—</b><small>%</small></strong></div>
+                <div><span>DNS</span><strong><b data-result="dns">—</b> <small>ms</small></strong></div>
+                <div><span>MTU</span><strong><b data-result="mtu">—</b></strong></div>
+                <div><span>Link</span><strong><b data-result="link">—</b> <small>Mbps</small></strong></div>
+                <div><span>Gateway</span><strong><b data-result="gateway">—</b> <small>ms</small></strong></div>
+                <div><span>Route</span><strong><b data-result="route">—</b> <small>hops</small></strong></div>
+            </div>
+
+            <div class="diagnostic-list">
+                <div data-check="dns"><span>DNS</span><strong>—</strong></div>
+                <div data-check="tcp"><span>TCP</span><strong>—</strong></div>
+                <div data-check="adapter"><span>Adapter</span><strong>—</strong></div>
+                <div data-check="background"><span>Background Traffic</span><strong>—</strong></div>
+                <div data-check="mtu"><span>MTU</span><strong>—</strong></div>
+                <div data-check="stability"><span>Packet Stability</span><strong>—</strong></div>
+            </div>
+
+            <button class="optimize-button" type="button">Optimize 2 Issues</button>
+        </section>
+    </main>
+
+    <section class="tool-window" hidden aria-live="polite">
+        <header class="tool-window-header">
+            <button class="tool-back" type="button" aria-label="กลับไปหน้าหลัก">‹</button>
+            <div>
+                <small data-i18n="networkTool">Network Tool</small>
+                <h1 class="tool-window-title"></h1>
+            </div>
+            <span class="tool-window-state">Ready</span>
+        </header>
+        <div class="tool-window-body"></div>
+        <button class="tool-primary-action" type="button"></button>
+    </section>
+
+    <section class="settings-window" hidden aria-label="Settings">
+        <header class="settings-window-header">
+            <button class="settings-back" type="button" aria-label="Back">‹</button>
+            <div>
+                <small data-i18n="application">Application</small>
+                <h1 data-i18n="settings">Settings</h1>
+            </div>
+            <span class="settings-state" data-i18n="saved">Saved</span>
+        </header>
+        <div class="settings-window-body">
+            <label class="language-setting" for="language-select">
+                <span>
+                    <strong data-i18n="language">Language</strong>
+                    <small data-i18n="languageDescription">Change the application display language</small>
+                </span>
+                <select id="language-select" class="language-select"></select>
+            </label>
+            <div class="language-import">
+                <button class="language-import-button" type="button" data-i18n="importLanguage">Import language pack</button>
+                <small data-i18n="importLanguageDescription">Add any BCP-47 language from a BYTE BOOST JSON language pack.</small>
+                <input class="language-file-input" type="file" accept="application/json,.json" hidden>
+            </div>
+            <p class="settings-note" data-i18n="languageApplied">Language changes are applied immediately and saved on this device.</p>
+        </div>
+    </section>
+   </div>
+   <script src="./i18n.js"></script>
+   <script src="./app.js"></script>
+</body>
+</html>
