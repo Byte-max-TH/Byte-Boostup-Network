@@ -65,3 +65,11 @@ Network-changing operations require administrator permission. BYTE BOOST saves a
 ## Safety
 
 Read-only scans do not require elevation. Operations that change Windows network settings request administrator permission, validate inputs, serialize mutations, and capture a restorable baseline before supported changes.
+
+## Credits
+
+Special thanks to **LY Corporation and the LINE Seed team** for creating [LINE Seed Sans TH](https://seed.line.me/index_th.html), the typeface used throughout the BYTE BOOST interface. Its clear and friendly Thai letterforms help make the application easier and more enjoyable to use.
+
+ขอขอบคุณ **LY Corporation และทีมผู้พัฒนา LINE Seed** สำหรับฟอนต์ [LINE Seed Sans TH](https://seed.line.me/index_th.html) ที่ใช้เป็นแบบอักษรหลักใน BYTE BOOST ช่วยให้ข้อความภาษาไทยอ่านง่าย สวยงาม และเป็นมิตรกับผู้ใช้งาน
+
+LINE Seed fonts are distributed under the [SIL Open Font License 1.1](https://openfontlicense.org/).
