@@ -4,6 +4,26 @@
   "private": true,
   "description": "BYTE BOOST Windows network diagnostics and optimizer",
   "author": "BYTE BOOST",
+  "keywords": [
+    "windows-network-optimizer",
+    "gaming-ping-optimizer",
+    "network-diagnostics",
+    "dns-optimizer",
+    "mtu-optimizer",
+    "packet-loss",
+    "low-latency",
+    "network-repair",
+    "electron",
+    "powershell"
+  ],
+  "homepage": "https://github.com/Byte-max-TH/Byte-Boostup-Network#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byte-max-TH/Byte-Boostup-Network.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Byte-max-TH/Byte-Boostup-Network/issues"
+  },
   "main": "electron/main.js",
   "scripts": {
     "start": "electron .",
